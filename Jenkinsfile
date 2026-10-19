@@ -19,8 +19,8 @@ pipeline {
 		}
 		stage('Build Metadata') {
 			steps { 
-			bat 'echo %BUILD_NUMBER% > build_info.txt'
-			archiveArtifacts artifacts: 'build_info.txt'
+				bat 'echo %BUILD_NUMBER% > build_info.txt'
+				archiveArtifacts artifacts: 'build_info.txt'
 			}
 		}
     }
