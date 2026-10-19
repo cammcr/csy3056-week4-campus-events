@@ -22,7 +22,11 @@ pipeline {
 		}
 		stage('Archive Release') {
 			steps { 
-				archiveArtifacts artifacts: 'dist/*.zip'
+				archiveArtifacts artifacts: 'build_info.txt'
+			}
+		}
+		stage('Archive Build Info') {
+			steps { 
 				archiveArtifacts artifacts: 'build_info.txt'
 			}
 		}
