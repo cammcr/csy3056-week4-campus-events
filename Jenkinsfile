@@ -20,7 +20,7 @@ pipeline {
 		stage('Build Metadata') {
 			steps { bat 'echo %BUILD_NUMBER% > build_info.txt'}
 		}
-				stage('Archive Release') {
+		stage('Archive Release') {
 			steps { 
 				archiveArtifacts artifacts: 'dist/*.zip'
 				archiveArtifacts artifacts: 'build_info.txt'
